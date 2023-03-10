@@ -5,7 +5,12 @@
  * person hello on the Console.
  * 
  */
+Console.Write("Please write comma-separated list of first names (no spaces): ");
+string? firstNamesStr = Console.ReadLine();
 
+List<string> firstNames = firstNamesStr.Split(',').ToList();
 
-
-
+foreach (string firstName in firstNames)
+{
+    Console.WriteLine(firstName);
+}
